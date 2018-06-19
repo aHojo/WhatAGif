@@ -1,6 +1,35 @@
+body{
+    background-color: #474747;
+    color: white;
+}
+
+label, input#search-input {
+    display: block;
+}
+
+input#search-button {
+    display: inline-block;
+}
 .gifs {
     margin: 5px 10px 5px 10px;
-    height: 300px;
+    height: 200px;
     width: 200px;
     object-fit: contain;
+}
+
+.gif-button {
+    margin: 10px;
+}
+
+div.card {
+  background: #17141f;
+  width: 250px !important;
+  /* -webkit-box-shadow: 0 10px 6px -6px red;
+  -moz-box-shadow: 0 10px 6px -6px red;
+  box-shadow: 0 10px 6px -6px red; */
+  box-shadow: 0 0 4px 1px rgb(250, 0, 0);
+}
+
+#printed-gifs {
+    padding-top: 10px
 }

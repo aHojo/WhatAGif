@@ -49,12 +49,20 @@ function displayTheGifs() {
         displayGif.empty();
         for(let x = 0; x < response.data.length; x++){
             var holder = $('<img>');
+            var containerDiv = $('<div>'); 
+            var infoDiv = $('<div>');
+            containerDiv.addClass('card text-center');
+            infoDiv.addClass('card-header');
+            infoDiv.text(`Title: ${response.data[x].title}`);
+            infoDiv.append(`<br /> Rating: ${response.data[x].rating}`);
             holder.attr('src', response.data[x].images.fixed_width.url);
             holder.attr('data-animated', response.data[x].images.fixed_width.url);
             holder.attr('data-current', 'animated');
             holder.attr('data-still', response.data[x].images.fixed_width_still.url);
-            holder.addClass('gifs');
-            displayGif.append(holder);
+            holder.addClass('gifs card-img-bottom');
+            containerDiv.append(infoDiv);
+            containerDiv.append(holder);
+            displayGif.append(containerDiv);
 
         }
 
